@@ -30,6 +30,7 @@ def run_game():
         guess: str = input('Enter a letter: ')
         if len(guess) > 20:
             print('Only guess single letters or the final word')
+        guess = guess.lower().strip()
         if guess in guessed:
             print(f'You already tried: "{guess}". Please try with another letter!')
             continue
